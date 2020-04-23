@@ -36,7 +36,7 @@ const Register = () => {
   return (
     <>
       <h1>Register</h1>
-      <form type="submit" onSubmit={onSubmit}>
+      <form className = 'reg-form' type="submit" onSubmit={onSubmit}>
         <input
           type="text"
           name="first_name"
