@@ -3,6 +3,7 @@ import axios from "axios";
 
 const Search = (props) => {
   const [place, setPlace] = useState({ city: "" });
+  const [info, setInfo]=useState([])
 
 
   const doSearch = (city) => {
@@ -11,6 +12,9 @@ const Search = (props) => {
       .then((res) => {
          props.setUserCoords(res.data.features[0].center);
       });
+      axios.get(`https://labspt9-quake-be.herokuapp.com/emergency/${city.city}`)
+      // .then(res =>console.log("HERE", res.data))
+      .then(res=> setInfo([res.data]))
   };
 
   const handleInput = (e) => {
@@ -27,6 +31,7 @@ const Search = (props) => {
 
   return (
     <>
+    {info}
       <form type="submit" onSubmit={onSubmit}>
         <input
           type="text"

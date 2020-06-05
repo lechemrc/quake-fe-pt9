@@ -9,8 +9,7 @@ const Home = props => {
   return (
     <div className="home">
       <Header />
-      <Eroute/>
-      <Search setUserCoords={props.setUserCoords} />
+       <Search setUserCoords={props.setUserCoords} />
       <LeafletMap userCoords={props.userCoords} />
       <section>
         <p>

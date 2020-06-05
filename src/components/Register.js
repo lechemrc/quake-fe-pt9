@@ -5,13 +5,12 @@ import Footer from './Footer';
 
 const Register = (props) => {
   const [userData, setUserData] = useState({
-    first_name: "",
-    last_name: "",
+  
     password: "",
     email: "",
     city: "",
     country: "",
-    phone: "",
+    
   });
 
   const handleInput = (e) => {

@@ -9,6 +9,7 @@ import Home from "./components/Home";
 import Dashboard from "./components/Dashboard";
 import Prepare from './components/Prepare';
 import Fema from './components/Fema'
+import UserContext from './contexts/UserContext';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/">
           <Home userCoords={userCoords} setUserCoords={setUserCoords} />
         </Route>
+        <UserContext.Provider value= {{userData, setUserData}}/>
         <Route exact path="/register" component={Register} />
         <Route exact path="/login">
           <Login setUserData={setUserData} />

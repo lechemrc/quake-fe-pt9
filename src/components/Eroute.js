@@ -28,8 +28,11 @@ const Eroute = ()=> {
 
         <>
         <h1>Emergency</h1>
-        <p>{info}</p>
-
+        <div className = 'emergency'>
+          <h1>{city.city}</h1>
+        <p>{info} </p>
+        </div>
+ 
         <form type = 'submit ' onSubmit={getInfo}>
             <input
               type = 'text'

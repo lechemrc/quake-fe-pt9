@@ -9,6 +9,14 @@
   align-content: center;
   justify-content: center;
 }
+.emergency{
+  color: white;
+  border: 2px solid orange;
+}
+.emergency p {
+  margin: 4px;
+}
+
 .reg-form{
    /* display: flex;
   flex-direction: column;
