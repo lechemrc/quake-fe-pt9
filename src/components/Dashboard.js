@@ -24,7 +24,7 @@ const Dashboard = props => {
       <h1>Dashboard</h1>
       <h2>Welcome {user.email}!</h2>
       <h3>Location: {user.city}, {user.country}</h3>
-      <Search setUserCoords={props.setUserCoords} />
+      <Search userCoords = {props.userCoords}setUserCoords={props.setUserCoords} />
       {/* <Dropdown setUserCoords= {setUserCoords}/> */}
 
       <LeafletMap userCoords={props.userCoords} />

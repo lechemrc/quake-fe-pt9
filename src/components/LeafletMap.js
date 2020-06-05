@@ -11,7 +11,7 @@ class LeafletMap extends Component {
       lng: props.userCoords[0],
       zoom: 1,
       quakes: {}, // geoJSON data
-      magnitude: 4, // minimun magnitude to display on map.
+      magnitude: 5, // minimun magnitude to display on map.
       geojsonMarkerOptions: {
         // These are options to be passed to markerStyles().
         radius: 8,
@@ -22,6 +22,8 @@ class LeafletMap extends Component {
         fillOpacity: 0.5
       }
     };
+
+
     // fn passed to the filter prop of react-leaflets GeoJSON component.
     this.filterByMag = (feature, layer) => {
       return feature.properties.magnitude >= this.state.magnitude;
@@ -43,6 +45,9 @@ class LeafletMap extends Component {
       const quakes = res.data;
       this.setState({ quakes });
     });
+    // this.state.quakes.map(e=> {
+    //   if (e.)
+    // })
   }
 
   componentDidUpdate(prevProps) {
